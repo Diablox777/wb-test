@@ -31,7 +31,7 @@
 .search-bar {
   width: 100%;
   height: 3vh;
-  padding: 5px 5px 5px 30px;
+  padding: 0px 5px 0px 30px;
   font-family: "Helvetica Neue Cyr";
   font-size: 10px;
   font-weight: 400;
@@ -45,6 +45,7 @@
   outline: none;
   display: flex; /* Добавлено для использования flexbox */
   align-items: center; /* Вертикальное центрирование */
+  line-height: 3vh;
 }
 
 .search-bar::placeholder {
@@ -193,6 +194,7 @@
 
   .search-bar {
     font-size: 14px;
+    line-height: 3.5vh;
     height: 3.5vh;
   }
 
@@ -209,6 +211,7 @@
 
   .filter-icon {
     width: 4vh;
+    line-height: 4vh;
   }
 
   .search-bar {
