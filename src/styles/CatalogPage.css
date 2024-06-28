@@ -30,9 +30,10 @@
 
 .search-bar {
   width: 100%;
+  height: 3vh;
   padding: 5px 5px 5px 30px;
   font-family: "Helvetica Neue Cyr";
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
   text-align: left;
   color: rgba(255, 255, 255, 1);
@@ -48,7 +49,7 @@
   color: rgba(255, 255, 255, 1);
   font-family: "Helvetica Neue Cyr";
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .search-icon {
@@ -190,6 +191,7 @@
 
   .search-bar {
     font-size: 14px;
+    height: 3.5vh;
   }
 
   .filter-icon {
@@ -205,5 +207,9 @@
 
   .filter-icon {
     width: 4vh;
+  }
+
+  .search-bar {
+    height: 4vh;
   }
 }
