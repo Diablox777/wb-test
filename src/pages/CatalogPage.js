@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard";
-import { TelegramWebAppContainer } from "@telegram-web-app/core";
 import "../styles/CatalogPage.css";
 
 const CatalogPage = ({ products, categories }) => {
@@ -40,20 +39,28 @@ const CatalogPage = ({ products, categories }) => {
     return matchesSearchTerm && matchesCategory;
   });
 
-  const telegram = new TelegramWebAppContainer();
-
-  telegram.WebApp.ready(() => {
+  useEffect(() => {
     const handleBackButtonClick = () => {
       console.log("Back button clicked");
       window.history.back();
     };
 
-    if (telegram.WebApp.backButton) {
-      telegram.WebApp.backButton.isVisible(true).onClick(handleBackButtonClick); // Set the click event handler
+    // Ensure Telegram WebApp is ready before interacting with components
+    if (window.Telegram) {
+      const { WebApp } = window.Telegram;
+
+      WebApp.ready(() => {
+        if (WebApp.BackButton) {
+          WebApp.BackButton.show();
+          WebApp.BackButton.onClick(handleBackButtonClick);
+        } else {
+          console.error("Back button not available.");
+        }
+      });
     } else {
-      console.error("Back button not available.");
+      console.error("Telegram WebApp is not defined.");
     }
-  });
+  }, []);
 
   return (
     <div className="catalog-page">
