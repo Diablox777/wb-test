@@ -12,9 +12,9 @@ import './index.css';
  
 
   const App = () => {
-    const [products, setProducts] = useState([]);
+   // const [products, setProducts] = useState([]);
 
-   /*   const [products, setProducts] = useState([
+      const [products, setProducts] = useState([
      {
        id: 1,
        image: "/Canada.jpg" ,
@@ -112,7 +112,7 @@ import './index.css';
             },
                         
 
-   ]);  */
+   ]);  
     const categories = ['Женщинам', 'Мужчинам', 'Обувь', 'Детям', 'Дом', 'Новый год'];
     const [userInfo, setUserInfo] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -178,7 +178,7 @@ import './index.css';
       }
     };
   
-    useEffect(() => {
+  /*  useEffect(() => {
       window.Telegram.WebApp.expand();
   
       const fetchData = async () => {
@@ -209,7 +209,7 @@ import './index.css';
   
     if (isLoading) {
       return <div>Загрузка...</div>;
-    }  
+    }  */
   
     const handleStepComplete = (step, formData) => {
       // Логика для обработки завершения шага
