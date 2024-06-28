@@ -28,8 +28,7 @@ const CatalogPageModerate = ({ products, categories }) => {
   };
 
   const filteredProducts = products.filter((product) => {
-    const matchesSearchTerm = product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                              product.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearchTerm = product.name.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(product.category);
     return matchesSearchTerm && matchesCategory;
   });

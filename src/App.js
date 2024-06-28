@@ -223,7 +223,7 @@ import './index.css';
             <Routes>
               <Route exact path="/" element={<CatalogPage products={products} categories={categories} />} />
               <Route path="/catalog" element={<CatalogPage products={products} categories={categories}/>} />
-              <Route path="/catalog-moderate" element={<CatalogPageModerate products={products} />} />
+              <Route path="/catalog-moderate" element={<CatalogPageModerate products={products} categories={categories}/>} />
               <Route path="/add-product" element={<AddProductPage fetchProducts={fetchProducts} products={products} setProducts={setProducts} categories={categories} />} />
               <Route path="/purchases" element={<PurchasesPage products={products} userInfo={userInfo} />} />
               <Route path="/profile" element={<ProfilePage />} />
