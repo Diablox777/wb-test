@@ -1,0 +1,146 @@
+p {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1vw;
+  justify-content: space-between;
+}
+
+.product-card {
+  aspect-ratio: 135 / 220;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  width: calc(50% - 0.5vh);
+  margin-bottom: 0.5vh;
+  box-sizing: border-box;
+}
+
+.product-image {
+  width: 100%;
+  height: 80%;
+  flex-grow: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.catalog-skeleton {
+  background-color: #e0e0e0;
+  width: 100%;
+  height: 80%;
+  flex-grow: 1;
+  border-radius: 8px;
+  animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #f0f0f0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+.product-info {
+  padding: 5px;
+  padding-top: 8px;
+  display: flex;
+  gap: 2px;
+  height: 20%;
+  flex-direction: column;
+}
+
+.product-description {
+  font-family: "Helvetica Neue Cyr";
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.4;
+}
+
+.product-price {
+  display: flex;
+  gap: 5px;
+  align-items: end;
+}
+
+.product-old-price {
+  font-family: "Helvetica Neue Cyr";
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(113, 113, 113, 1);
+  text-decoration: line-through;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.product-new-price {
+  font-family: "Helvetica Neue Cyr";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  color: rgba(196, 46, 181, 1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.product-image-category {
+  width: 100%;
+  height: 80%;
+  flex-grow: 1;
+  border-radius: 8px;
+  display: block;
+}
+
+@media (min-width: 600px) {
+  .product-card {
+    width: calc(50% - 1vh);
+  }
+
+  .product-description {
+    font-size: 12px;
+  }
+
+  .product-old-price {
+    font-size: 12px;
+  }
+
+  .product-new-price {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .product-card {
+    width: calc(50% - 1.5vh);
+  }
+
+  .product-description {
+    font-size: 13px;
+  }
+
+  .product-old-price {
+    font-size: 13px;
+  }
+
+  .product-new-price {
+    font-size: 17px;
+  }
+}
