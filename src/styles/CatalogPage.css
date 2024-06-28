@@ -39,12 +39,10 @@
   color: rgba(255, 255, 255, 1);
   border: 0.05vh solid rgba(0, 0, 0, 1);
   border-radius: 8px;
-  box-sizing: border-box;
   opacity: 1;
   background-color: rgba(188, 122, 255, 1);
   outline: none;
-  display: flex; /* Добавлено для использования flexbox */
-  align-items: center; /* Вертикальное центрирование */
+  display: flex;
   line-height: 3vh;
 }
 
