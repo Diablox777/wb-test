@@ -49,6 +49,7 @@
   display: flex;
   justify-content: space-evenly;
   padding: 0;
+  gap: 20px;
 }
 
 .profile-buttons button {
@@ -56,7 +57,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 135px;
   height: 39px;
   padding: 10px 20px;
   border: none;
@@ -100,21 +100,21 @@
 .item-text {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
 .item-title {
   display: flex;
   align-items: center;
   font-family: "Helvetica Neue Cyr";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   gap: 5px;
 }
 
 .item-subtitle {
   font-family: "Helvetica Neue Cyr";
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
 }
 

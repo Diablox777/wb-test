@@ -305,11 +305,10 @@ const PurchaseStepsPage = ({ products }) => {
                 <p className="purchase-step-text">
                   <span className="important">Важно! Соблюдайте инструкцию</span>
                 </p>
-                <ul className="purchase-step-text text-ul">
+                <ul className="purchase-step-text text-ul" style={{ marginBottom: '20px' }}>
                   <li>Добавить товар в избранное;</li>
                   <li>Добавить бренд в избранное.</li>
                 </ul>
-                <div className="step-footer-container">
                   <div
                     className="upload-feedback-step4"
                     onClick={() => setChecked(!checked)}
@@ -327,6 +326,7 @@ const PurchaseStepsPage = ({ products }) => {
                     Добавил(а) товар и бренд в избранное
                     </div>
                   </div>
+                  <div className="step-footer-container">
                   <button
                     className="purchase-step-button"
                     onClick={handleStepSubmit}
@@ -627,7 +627,81 @@ const PurchaseStepsPage = ({ products }) => {
                     </div>
                   );
       default:
-        return <p>Unknown step</p>;
+        return (
+          <div className="purchase-step-page">
+                      <div className="purchase-step-header">
+                        <p className="title-class-step">
+                        Шаг 7: Отчет об отзыве
+                        </p>
+                      </div>
+                      <div className="purchase-step-content">
+                        <p className="purchase-step-text">
+                          <span className="important">Важно! Соблюдайте инструкцию</span>
+                        </p>
+                        <ul className="purchase-step-text text-ul" style={{ marginBottom: "20px" }}>
+                          <li>Оставьте положительный текстовый отзыв, прикрепите фото и поставьте 5 звёзд;</li>
+                          <li>Запишите видео с разрезанным штрих-кодом на фоне товара;</li>
+                          <li>Прикрепите скриншот, где видно, что отзыв уже опубликован;</li>
+                          <li>Прикрепите видео с разрезанным штрих-кодом.</li>
+                        </ul>
+                  <div className="article-input">
+                  <p className="upload-title" style={{ marginBottom: 0 }}>
+                  Загрузите скриншот опубликованного отзыва
+                  </p>
+                  <label className="upload-label" htmlFor="file-upload-competitor">
+                    {uploaded.image5 ? "Изображение загружено" : "Выберите изображение"}
+                  </label>
+                  <input
+                    id="file-upload-competitor"
+                    type="file"
+                    className="upload-input"
+                    onChange={(e) => handleFileUpload(e, "image5")}
+                  />
+                  {imageError.image5 && <p className="red-error">Загрузите изображение</p>}
+                  </div>
+                  <div className="article-input">
+                <p className="upload-title" style={{ marginBottom: 0 }}>
+                Загрузите видео с разрезанным штрих-кодом на фоне товара
+                </p>
+                <label className="upload-label" htmlFor="file-upload-competitor">
+                  {uploaded.image6 ? "Изображение загружено" : "Выберите изображение"}
+                </label>
+                <input
+                  id="file-upload-competitor"
+                  type="file"
+                  className="upload-input"
+                  onChange={(e) => handleFileUpload(e, "image6")}
+                />
+                {imageError.image6 && <p className="red-error">Загрузите изображение</p>}
+                </div>
+                <div className="step-footer-container">
+                          <div
+                            className="upload-feedback-step4"
+                            onClick={() => setChecked(!checked)}
+                          >
+                            <div
+                              className={`upload-checkbox ${checked ? "checked" : ""}`}
+                            >
+                              {checked && (
+                                <svg viewBox="0 0 13 13">
+                                  <path d="M11.25 3.75L4.75 10.25L1.75 7.25L2.75 6.25L4.75 8.25L10.25 2.75L11.25 3.75Z" />
+                                </svg>
+                              )}
+                            </div>
+                            <div className="upload-feedback-text">
+                            Оставил(а) отзыв
+                            </div>
+                          </div>
+                          <button
+                            className="purchase-step-button"
+                            onClick={handleStepSubmit}
+                          >
+                            Продолжить
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+        );
     }
   };
 

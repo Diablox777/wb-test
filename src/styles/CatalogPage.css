@@ -30,10 +30,10 @@
 
 .search-bar {
   width: 100%;
-  height: 3vh;
+  height: 4vh;
   padding: 0px 5px 0px 30px;
   font-family: "Helvetica Neue Cyr";
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
   text-align: left;
   color: rgba(255, 255, 255, 1);
@@ -43,14 +43,14 @@
   background-color: rgba(188, 122, 255, 1);
   outline: none;
   display: flex;
-  line-height: 3vh;
+  line-height: 4vh;
 }
 
 .search-bar::placeholder {
   color: rgba(255, 255, 255, 1);
   font-family: "Helvetica Neue Cyr";
   font-weight: 400;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .search-icon {
@@ -58,7 +58,6 @@
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 10px;
   height: auto;
   pointer-events: none;
 }
@@ -81,7 +80,7 @@
   position: fixed;
   bottom: 0;
   left: 50%;
-  max-height: 70%;
+  height: 70%;
   transform: translateX(-50%);
   width: 100%;
   border-radius: 0.8vh 0.8vh 0 0;
@@ -106,7 +105,7 @@
 
 .popup-title {
   font-family: "Helvetica Neue Cyr";
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   text-align: center;
   width: 100%;
@@ -124,16 +123,17 @@
 
 .popup-category-title {
   font-family: "Helvetica Neue Cyr";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .popup-categories {
   display: flex;
   flex-direction: column;
+  height: 42vh;
   overflow-y: auto;
-  gap: 5px;
+  gap: 15px;
 }
 
 .popup-category {
@@ -141,7 +141,7 @@
   justify-content: space-between;
   align-items: center;
   font-family: "Helvetica Neue Cyr";
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .popup-category input[type="checkbox"] {
@@ -149,6 +149,11 @@
   height: 15px;
   border-radius: 0.4vh;
   border: 0.1vh solid rgba(0, 0, 0, 1);
+}
+
+.popup-category input[type="checkbox"]:checked + svg {
+  display: block;
+  
 }
 
 .popup-footer {
@@ -168,7 +173,7 @@
   border-radius: 8px;
   background-color: rgba(103, 103, 103, 0.38);
   font-family: "Helvetica Neue Cyr";
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   cursor: pointer;
   outline: none;
@@ -190,12 +195,6 @@
     gap: 3vh;
   }
 
-  .search-bar {
-    font-size: 14px;
-    line-height: 3.5vh;
-    height: 3.5vh;
-  }
-
   .filter-icon {
     width: 3.5vh;
   }
@@ -210,9 +209,5 @@
   .filter-icon {
     width: 4vh;
     line-height: 4vh;
-  }
-
-  .search-bar {
-    height: 4vh;
   }
 }
