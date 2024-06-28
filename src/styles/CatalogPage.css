@@ -43,6 +43,8 @@
   opacity: 1;
   background-color: rgba(188, 122, 255, 1);
   outline: none;
+  display: flex; /* Добавлено для использования flexbox */
+  align-items: center; /* Вертикальное центрирование */
 }
 
 .search-bar::placeholder {
