@@ -151,11 +151,6 @@
   border: 0.1vh solid rgba(0, 0, 0, 1);
 }
 
-.popup-category input[type="checkbox"]:checked + svg {
-  display: block;
-  
-}
-
 .popup-footer {
   border-top: 0.1vh solid rgba(0, 0, 0, 1);
   display: flex;
@@ -208,6 +203,5 @@
 
   .filter-icon {
     width: 4vh;
-    line-height: 4vh;
   }
 }

@@ -12,7 +12,7 @@ import './index.css';
  
 
   const App = () => {
-   // const [products, setProducts] = useState([]);
+//const [products, setProducts] = useState([]);
 
       const [products, setProducts] = useState([
      {
@@ -25,10 +25,11 @@ import './index.css';
        marketprice: 1500000000000,
        yourprice: 130000000,
        discount: 1500000000000,
-       step: "7",
+       step: "Завершено",
        keywords: "Диффузор для дома, Диффузоры РФ, Домашний ремонт окон и всего возможного",
        article: "123456",
-     category: "Женщинам"
+     category: "Женщинам",
+     isComplete: true,
      },
      {
      id: 2,
@@ -113,7 +114,7 @@ import './index.css';
                         
 
    ]);  
-    const categories = ['Женщинам', 'Мужчинам', 'Обувь', 'Детям', 'Дом', 'Новый год', 'Красота', 'Аксессуары', 'Электроника', 'Игрушки', 'Мебель', 'Товары для взрослых', 'Бытовая техника', 'Зоотовары', 'Спорт', 'Автотовары', 'Ювелирные изделия', 'Для ремонта', 'Сад и дача', 'Здоровье', 'Канцтовары'];
+   const categories = ['Женщинам', 'Мужчинам', 'Обувь', 'Детям', 'Дом', 'Новый год', 'Красота', 'Аксессуары', 'Электроника', 'Игрушки', 'Мебель', 'Товары для взрослых', 'Бытовая техника', 'Зоотовары', 'Спорт', 'Автотовары', 'Ювелирные изделия', 'Для ремонта', 'Сад и дача', 'Здоровье', 'Канцтовары'];
     const [userInfo, setUserInfo] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const baseURL = 'https://nilurl.ru:8000/';
